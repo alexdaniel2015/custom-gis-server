@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www", "www\", "{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/www"
+		Debug.AspNetCompiler.PhysicalPath = "www\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/www"
+		Release.AspNetCompiler.PhysicalPath = "www\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12257"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMap", "src\AjaxMap\AjaxMap\AjaxMap.csproj", "{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "C:\Users\MixTape\Documents\Visual Studio 2010\Projects\WcfService\WcfService.csproj", "{DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
