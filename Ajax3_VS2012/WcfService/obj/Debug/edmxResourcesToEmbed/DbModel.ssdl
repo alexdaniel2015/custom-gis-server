@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GisDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GisDbModelStoreContainer">
+    <EntitySet Name="Companies" EntityType="GisDbModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuelTypes" EntityType="GisDbModel.Store.FuelTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lands" EntityType="GisDbModel.Store.Lands" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OwnershipTypes" EntityType="GisDbModel.Store.OwnershipTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Persons" EntityType="GisDbModel.Store.Persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Prices" EntityType="GisDbModel.Store.Prices" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Services" EntityType="GisDbModel.Store.Services" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Spec" EntityType="GisDbModel.Store.Spec" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StationEmployees" EntityType="GisDbModel.Store.StationEmployees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stations" EntityType="GisDbModel.Store.Stations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StationService" EntityType="GisDbModel.Store.StationService" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="GisDbModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Lands_OwnershipTypes" Association="GisDbModel.Store.FK_Lands_OwnershipTypes">
+      <End Role="OwnershipTypes" EntitySet="OwnershipTypes" />
+      <End Role="Lands" EntitySet="Lands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lands_Persons" Association="GisDbModel.Store.FK_Lands_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Lands" EntitySet="Lands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lands_Stations" Association="GisDbModel.Store.FK_Lands_Stations">
+      <End Role="Stations" EntitySet="Stations" />
+      <End Role="Lands" EntitySet="Lands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persons_Spec" Association="GisDbModel.Store.FK_Persons_Spec">
+      <End Role="Spec" EntitySet="Spec" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prices_FuelTypes" Association="GisDbModel.Store.FK_Prices_FuelTypes">
+      <End Role="FuelTypes" EntitySet="FuelTypes" />
+      <End Role="Prices" EntitySet="Prices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prices_Stations" Association="GisDbModel.Store.FK_Prices_Stations">
+      <End Role="Stations" EntitySet="Stations" />
+      <End Role="Prices" EntitySet="Prices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StationEmployees_Persons" Association="GisDbModel.Store.FK_StationEmployees_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="StationEmployees" EntitySet="StationEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StationEmployees_Stations" Association="GisDbModel.Store.FK_StationEmployees_Stations">
+      <End Role="Stations" EntitySet="Stations" />
+      <End Role="StationEmployees" EntitySet="StationEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stations_Companies" Association="GisDbModel.Store.FK_Stations_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Stations" EntitySet="Stations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StationService_Services" Association="GisDbModel.Store.FK_StationService_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="StationService" EntitySet="StationService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StationService_Stations" Association="GisDbModel.Store.FK_StationService_Stations">
+      <End Role="Stations" EntitySet="Stations" />
+      <End Role="StationService" EntitySet="StationService" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FuelTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Lands">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Station_ID" Type="int" Nullable="false" />
+    <Property Name="OwnerShipType_ID" Type="int" Nullable="false" />
+    <Property Name="Owner_ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="OwnershipTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="OwnershipType" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Speciality" Type="int" Nullable="false" />
+    <Property Name="Phone" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Prices">
+    <Key>
+      <PropertyRef Name="Station_ID" />
+      <PropertyRef Name="Fuel_ID" />
+    </Key>
+    <Property Name="Station_ID" Type="int" Nullable="false" />
+    <Property Name="Fuel_ID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Service_ID" />
+    </Key>
+    <Property Name="Service_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Spec">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Speciality" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StationEmployees">
+    <Key>
+      <PropertyRef Name="Station_ID" />
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Station_ID" Type="int" Nullable="false" />
+    <Property Name="Person_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Company_ID" Type="int" Nullable="false" />
+    <Property Name="Street" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="HouseNo" Type="int" Nullable="false" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Coordinates" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="StationService">
+    <Key>
+      <PropertyRef Name="Station_ID" />
+      <PropertyRef Name="Service_ID" />
+    </Key>
+    <Property Name="Station_ID" Type="int" Nullable="false" />
+    <Property Name="Service_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Lands_OwnershipTypes">
+    <End Role="OwnershipTypes" Type="GisDbModel.Store.OwnershipTypes" Multiplicity="1" />
+    <End Role="Lands" Type="GisDbModel.Store.Lands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OwnershipTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Lands">
+        <PropertyRef Name="OwnerShipType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lands_Persons">
+    <End Role="Persons" Type="GisDbModel.Store.Persons" Multiplicity="1" />
+    <End Role="Lands" Type="GisDbModel.Store.Lands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Lands">
+        <PropertyRef Name="Owner_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lands_Stations">
+    <End Role="Stations" Type="GisDbModel.Store.Stations" Multiplicity="1" />
+    <End Role="Lands" Type="GisDbModel.Store.Lands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Lands">
+        <PropertyRef Name="Station_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persons_Spec">
+    <End Role="Spec" Type="GisDbModel.Store.Spec" Multiplicity="1" />
+    <End Role="Persons" Type="GisDbModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Spec">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="Speciality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prices_FuelTypes">
+    <End Role="FuelTypes" Type="GisDbModel.Store.FuelTypes" Multiplicity="1" />
+    <End Role="Prices" Type="GisDbModel.Store.Prices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuelTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prices">
+        <PropertyRef Name="Fuel_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prices_Stations">
+    <End Role="Stations" Type="GisDbModel.Store.Stations" Multiplicity="1" />
+    <End Role="Prices" Type="GisDbModel.Store.Prices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prices">
+        <PropertyRef Name="Station_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StationEmployees_Persons">
+    <End Role="Persons" Type="GisDbModel.Store.Persons" Multiplicity="1" />
+    <End Role="StationEmployees" Type="GisDbModel.Store.StationEmployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StationEmployees">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StationEmployees_Stations">
+    <End Role="Stations" Type="GisDbModel.Store.Stations" Multiplicity="1" />
+    <End Role="StationEmployees" Type="GisDbModel.Store.StationEmployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StationEmployees">
+        <PropertyRef Name="Station_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stations_Companies">
+    <End Role="Companies" Type="GisDbModel.Store.Companies" Multiplicity="1" />
+    <End Role="Stations" Type="GisDbModel.Store.Stations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Stations">
+        <PropertyRef Name="Company_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StationService_Services">
+    <End Role="Services" Type="GisDbModel.Store.Services" Multiplicity="1" />
+    <End Role="StationService" Type="GisDbModel.Store.StationService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Service_ID" />
+      </Principal>
+      <Dependent Role="StationService">
+        <PropertyRef Name="Service_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StationService_Stations">
+    <End Role="Stations" Type="GisDbModel.Store.Stations" Multiplicity="1" />
+    <End Role="StationService" Type="GisDbModel.Store.StationService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StationService">
+        <PropertyRef Name="Station_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

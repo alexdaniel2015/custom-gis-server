@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www", "www\", "{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{92b58258-de52-4735-b1a5-933bf2178052}|SharedContracts.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/www"
+		Debug.AspNetCompiler.PhysicalPath = "www\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/www"
+		Release.AspNetCompiler.PhysicalPath = "www\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12257"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C} = {E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMap", "src\AjaxMap\AjaxMap\AjaxMap.csproj", "{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedContracts", "SharedContracts\SharedContracts.csproj", "{92B58258-DE52-4735-B1A5-933BF2178052}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D9C5A7A8-B9D5-4F09-87CC-58E97C020116}.Release|x86.ActiveCfg = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3224A41B-1D11-4869-BAE6-AAD3E80F61E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{92B58258-DE52-4735-B1A5-933BF2178052}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

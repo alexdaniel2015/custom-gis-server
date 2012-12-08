@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="335fe4f8a3bb4ab4b0a3f5172c2e0555" Name="Diagram1">
+        <EntityTypeShape EntityType="GisDbModel.Company" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.FuelType" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Land" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.OwnershipType" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Person" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Price" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Service" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Spec" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.Station" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GisDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="GisDbModel.FK_Stations_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Prices_FuelTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Lands_OwnershipTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Lands_Persons" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Lands_Stations" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Persons_Spec" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.FK_Prices_Stations" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.StationEmployees" ManuallyRouted="false" />
+        <AssociationConnector Association="GisDbModel.StationService" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AjaxMap">
+</Property><Property Name="Solution File" Value="D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\AjaxMap.sln">
+</Property><Property Name="User Options File" Value="D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\AjaxMap.suo">
+</Property><Property Name="Date" Value="20 вересня 2012 р.">
+</Property><Property Name="Time" Value="23:05">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AjaxMap.sln" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AjaxMap.suo" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap.suo">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\AjaxMap.csproj" Description="Project file successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\AjaxMap.csproj">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\AjaxMapControl.cs" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\AjaxMapControl.cs">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\AjaxMapControlDesigner.cs" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\AjaxMapControlDesigner.cs">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\clientscripts\AjaxMap.js" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\clientscripts\AjaxMap.js">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\clientscripts\wz_jsgraphics.js" Description="File successfully backed up as D:\study\5 course\Venherskiy\Ajax3\src\AjaxMap\Backup\AjaxMap\clientscripts\wz_jsgraphics.js">
+</Event><Event ErrorLevel="1" Project="AjaxMap" Source="AjaxMap\AjaxMap.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\AjaxMap.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AjaxMap" Source="AjaxMap\AjaxMap.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AjaxMap.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AjaxMap.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AjaxMap" Source="AjaxMap\AjaxMap.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

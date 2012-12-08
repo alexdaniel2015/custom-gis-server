@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+
+<head id="head" runat="server">
+    <title></title>
+    <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <ul id="menu">
+            <li><a href="Main.aspx">Home</a></li>
+            <li><a href="About.aspx">About</a></li>
+            <li><a href="Default.aspx">Map</a></li>
+        </ul>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <p></p>
+        </div>
+    </form>
+</body>

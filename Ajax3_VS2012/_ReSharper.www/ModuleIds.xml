@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="D9C5A7A8-B9D5-4F09-87CC-58E97C020116" ModuleId="www" />
+  <Module PersistentId="3224A41B-1D11-4869-BAE6-AAD3E80F61E6" ModuleId="AjaxMap" />
+  <Module PersistentId="DBCEE79D-E0E2-47DF-9C0E-4B465AAA6D30" ModuleId="WcfService" />
+  <Module PersistentId="SharpMap, Version=0.9.2327.41798, Culture=neutral, PublicKeyToken=null" ModuleId="SharpMap" />
+  <Module PersistentId="E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C" ModuleId="WcfService_1" />
+</Modules>

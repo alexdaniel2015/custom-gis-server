@@ -1,0 +1,45 @@
+/*<![CDATA[*/
+body {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#fff;
+	font: 0.8em Verdana, arial, sans-serif;
+}
+
+.toolbar {	
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background: buttonface;
+	border-top: 1px solid buttonhighlight;
+	border-left: 1px solid buttonhighlight;
+	border-bottom: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	text-align:left;
+}
+			
+.button {
+	background: buttonface; 
+	border: 1px solid buttonface;
+	margin: 1px; 
+}
+			
+.raised	{ 
+	border-top: 1px solid buttonhighlight;
+	border-left: 1px solid buttonhighlight;
+	border-bottom: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	background: buttonface;
+	margin: 1px;
+}
+			
+.pressed {
+	border-top: 1px solid buttonshadow;
+	border-left: 1px solid buttonshadow;
+	border-bottom: 1px solid buttonhighlight;
+	border-right: 1px solid buttonhighlight;
+	background: buttonface;
+	margin: 1px;
+}
+/*]]>*/

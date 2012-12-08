@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d439a0d7-f44d-49c9-b38a-e1bd30286597" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="AjaxMap" />
+      <ReferencedAssembly AssemblyName="AutoMapper" />
+      <ReferencedAssembly AssemblyName="BruTile" />
+      <ReferencedAssembly AssemblyName="Common.Logging" />
+      <ReferencedAssembly AssemblyName="DotSpatial.Projections" />
+      <ReferencedAssembly AssemblyName="GeoAPI" />
+      <ReferencedAssembly AssemblyName="Microsoft.CSharp" />
+      <ReferencedAssembly AssemblyName="mscorlib" />
+      <ReferencedAssembly AssemblyName="NetTopologySuite" />
+      <ReferencedAssembly AssemblyName="PowerCollections" />
+      <ReferencedAssembly AssemblyName="ProjNet" />
+      <ReferencedAssembly AssemblyName="SharedContracts" />
+      <ReferencedAssembly AssemblyName="SharpMap" />
+      <ReferencedAssembly AssemblyName="stdole" />
+      <ReferencedAssembly AssemblyName="System" />
+      <ReferencedAssembly AssemblyName="System.Activities" />
+      <ReferencedAssembly AssemblyName="System.ComponentModel.DataAnnotations" />
+      <ReferencedAssembly AssemblyName="System.Configuration" />
+      <ReferencedAssembly AssemblyName="System.Core" />
+      <ReferencedAssembly AssemblyName="System.Data" />
+      <ReferencedAssembly AssemblyName="System.Data.DataSetExtensions" />
+      <ReferencedAssembly AssemblyName="System.Data.OracleClient" />
+      <ReferencedAssembly AssemblyName="System.Design" />
+      <ReferencedAssembly AssemblyName="System.Drawing" />
+      <ReferencedAssembly AssemblyName="System.EnterpriseServices" />
+      <ReferencedAssembly AssemblyName="System.IdentityModel" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel.Activation" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel.Activities" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel.Web" />
+      <ReferencedAssembly AssemblyName="System.Web" />
+      <ReferencedAssembly AssemblyName="System.Web.ApplicationServices" />
+      <ReferencedAssembly AssemblyName="System.Web.DynamicData" />
+      <ReferencedAssembly AssemblyName="System.Web.Extensions" />
+      <ReferencedAssembly AssemblyName="System.Web.Services" />
+      <ReferencedAssembly AssemblyName="System.Web.WebPages.Deployment" />
+      <ReferencedAssembly AssemblyName="System.Web.WebPages.Deployment" />
+      <ReferencedAssembly AssemblyName="System.Windows.Forms" />
+      <ReferencedAssembly AssemblyName="System.WorkflowServices" />
+      <ReferencedAssembly AssemblyName="System.Xml" />
+      <ReferencedAssembly AssemblyName="System.Xml.Linq" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WcfService/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a41fd5ed-767b-4018-b89a-f22082e57cc8" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WcfService/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3c488e80-3afa-46fa-904a-d19b43617a2e" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WcfService/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4f366299-bf3a-43ce-afda-d7317eaae6ca" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WcfService/Service1/mex" />
+    <MetadataFile FileName="SharedContracts.xsd" MetadataType="Schema" ID="0c18bd09-992d-4694-8230-b8102a6dbea0" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WcfService/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
