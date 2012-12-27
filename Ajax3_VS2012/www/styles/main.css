@@ -56,6 +56,16 @@
     min-width: 290px;
 }
 
+.search-menu {
+    background-color: #EAEAEA;
+    border-radius: 5px;
+    padding: 10px 10px 20px 20px;
+}
+
+.search-menu select{
+    margin-bottom: 0px;
+}
+
 input {
     float: left;
     margin-right: 5px;

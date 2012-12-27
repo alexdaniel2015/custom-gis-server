@@ -161,6 +161,30 @@
     <div class="container">
     <div id="testdiv"></div>
     <form id="Form1" runat="server" action="Default.aspx">
+        
+        <div class="row">
+            <div class="span10 search-menu">
+                <form class="form-inline">
+                    <h4>Search</h4>  
+                    
+                    <select name="Companies">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                     </select>
+                      
+                     <select name="Services">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                      </select>     
+                      <button type="submit" class="btn btn-info">Search</button>
+                </form>
+            </div>
+        </div>
+
         <div class="row">           
             <div id="divLayers" class="span3 config-menu">
                 <h4>Layers Configuration</h4>

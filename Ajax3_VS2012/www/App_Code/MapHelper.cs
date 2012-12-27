@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -82,6 +82,7 @@ public class MapHelper
             colorFill["Homes"] = azurePen.Color;
             colorFill["Proms"] = darkGrayPen.Color;
             colorFill["FuelStations"] = Color.FromArgb(255, 234, 234, 234);
+            
         }
 
         Dictionary<string, Color> colorLineDict = new Dictionary<string, Color>();
@@ -182,6 +183,7 @@ public class MapHelper
             fuelStationLayer.Style.Outline = new Pen(colorLineDict["FuelStations"]);
             fuelStationLayer.Style.Fill = new SolidBrush(colorFill["FuelStations"]);
             fuelStationLayer.Style.EnableOutline = true;
+            fuelStationLayer.Style.PointColor = Brushes.AliceBlue;
             map.Layers.Add(fuelStationLayer);
 
             //var tmp6 = new VectorLayer("Lviv"){DataSource = new ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LROAD12.shp"), true)};
@@ -239,6 +241,7 @@ public class MapHelper
                 HttpContext.Current.Server.MapPath(
                     @"~\App_Data\FuelStationsLayers\LvivObl\fuel_stations.shp"),
                 true);
+            fuelStationLayer.Style.PointColor = Brushes.AliceBlue;
             map.Layers.Add(fuelStationLayer);
 
             var roadsLayer = new VectorLayer("Roads");
