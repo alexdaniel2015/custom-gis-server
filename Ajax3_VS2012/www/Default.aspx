@@ -7,7 +7,7 @@
 <head runat="server">
 
     <meta charset="utf-8">
-    <title>Custom Gis Server</title>
+    <title>Map|Custom Gis Server</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Vitaliy Zasadnyy, Yuriy Hoy, Roman Drebotiy, Andriy Mamchur, Oleh Bulatovskuy">
 
@@ -144,12 +144,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Custom Gis Server</a>
+          <a class="brand" href="/www/">Custom Gis Server</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Map</a></li>
+              <li class="active"><a href="/www/">Map</a></li>
               <li><a href="#about">Directory</a></li>
-              <li><a href="#contact">About</a></li>
+              <li><a href="/www/About.aspx">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
