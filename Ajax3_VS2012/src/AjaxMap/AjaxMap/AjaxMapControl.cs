@@ -329,12 +329,15 @@ namespace AjaxMap
                 return "getmap.aspx?ID=" + HttpUtility.UrlEncode(imgID);
             }
             else
-                return _ResponseFormat.Replace("[WIDTH]", map.Size.Width.ToString()).
+            {
+                string response = _ResponseFormat.Replace("[WIDTH]", map.Size.Width.ToString()).
                                       Replace("[HEIGHT]", map.Size.Height.ToString()).
                                       Replace("[ZOOM]", map.Zoom.ToString(numberFormat_EnUS)).
                                       Replace("[X]", map.Center.X.ToString(numberFormat_EnUS)).
                                       Replace("[Y]", map.Center.Y.ToString(numberFormat_EnUS)).
                                       Replace("[LAYERS]", hiddenLayers);
+                return response;
+            }
         }
         /// <summary>
         /// Registers the client-side scripts and creates an initialize script for the current map

@@ -42,9 +42,12 @@ public partial class maphandler : System.Web.UI.Page
         if (!string.IsNullOrEmpty(Request.Params["Layers"]))
             Layer = Request.Params["Layers"].Split(new char[]{','});
         else throw (new ArgumentException("Invalid parameter"));
+
+        string colors = Request.Params["Colors"];
+        string colorsLine = Request.Params["ColorsLine"];
         
 		//Params OK
-		SharpMap.Map map = InitializeMap(Request.Params["MAP"], new System.Drawing.Size(Width, Height));
+        SharpMap.Map map = InitializeMap(Request.Params["MAP"], new System.Drawing.Size(Width, Height), colors, colorsLine);
 		if(map==null)
 			throw (new ArgumentException("Invalid map"));
 
@@ -89,16 +92,16 @@ public partial class maphandler : System.Web.UI.Page
             return myGroup.Layers[Int32.Parse(layerId[layerId.Length-1])];
     }
 
-	private SharpMap.Map InitializeMap(string MapID, System.Drawing.Size size)
+    private SharpMap.Map InitializeMap(string MapID, System.Drawing.Size size, string colors, string colorsLine)
 	{
 		//Set up the map. We use the method in the App_Code folder for initializing the map
 		switch (MapID)
 		{
 			//Our simple world map was requested 
 			case "SimpleWorld":
-				return MapHelper.InitializeMap(size);
+                return MapHelper.InitializeMap(size, colors, colorsLine);
 			default:
-				throw new ArgumentException("Invalid map '" + MapID + "' requested"); ;
+				throw new ArgumentException("Invalid map '" + MapID + "' requested");
 		}
 	}
 }

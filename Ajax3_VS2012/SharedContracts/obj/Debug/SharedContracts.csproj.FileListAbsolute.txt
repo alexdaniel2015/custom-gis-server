@@ -3,3 +3,12 @@ D:\study\5 course\Venherskiy\Ajax3_VS2012\SharedContracts\bin\Debug\SharedContra
 D:\study\5 course\Venherskiy\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.dll
 D:\study\5 course\Venherskiy\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.pdb
 D:\study\5 course\Venherskiy\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.csprojResolveAssemblyReference.cache
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\SharedContracts\bin\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\SharedContracts\bin\Debug\SharedContracts.pdb
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\SharedContracts\bin\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\SharedContracts\bin\Debug\SharedContracts.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.csprojResolveAssemblyReference.cache
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\SharedContracts\obj\Debug\SharedContracts.pdb

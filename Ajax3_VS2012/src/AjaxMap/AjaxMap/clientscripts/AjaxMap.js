@@ -489,6 +489,7 @@ function roundNumber(num, dec) {
 }
 
 function SharpMap_HiddenLayers(obj) {
+    
     var getstr = "";
     var theForm = (!document.forms['Form1']) ? document.Form1 : document.forms['Form1'];
     var inputs = theForm.getElementsByTagName("INPUT");
@@ -507,6 +508,7 @@ function SharpMap_HiddenLayers(obj) {
 
 /* disables members of the layergroup on Toggle*/
 function togLayerGroup(cb, DivId) {
+    alert("2");
     var myDiv = document.getElementById("myDiv" + DivId);
     if (myDiv != null) {
         var inputs = myDiv.getElementsByTagName("INPUT");

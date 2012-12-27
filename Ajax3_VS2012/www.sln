@@ -19,7 +19,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www", "www\", "{D9C5A7A8-B9
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "12257"
+		VWDPort = "43441"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
 		{E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C} = {E5BC0413-BAEA-48DA-8CE4-81A1313EFC1C}

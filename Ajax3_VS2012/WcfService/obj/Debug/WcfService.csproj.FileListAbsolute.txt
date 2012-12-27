@@ -16,3 +16,27 @@ D:\study\5 course\Venherskiy\Ajax3_VS2012\WcfService\obj\Debug\WcfService.pdb
 D:\study\5 course\Venherskiy\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.dll
 D:\study\5 course\Venherskiy\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.pdb
 D:\study\5 course\Venherskiy\Ajax3_VS2012\WcfService\obj\Debug\WcfService.csprojResolveAssemblyReference.cache
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.dll.config
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.pdb
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\AutoMapper.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\EntityFramework.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.pdb
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\AutoMapper.xml
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\EntityFramework.xml
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.csprojResolveAssemblyReference.cache
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.dll.config
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\WcfService.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\AutoMapper.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\EntityFramework.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\SharedContracts.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\AutoMapper.xml
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\bin\Debug\EntityFramework.xml
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.csprojResolveAssemblyReference.cache
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\WcfService\obj\Debug\WcfService.pdb

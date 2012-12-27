@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Cartography Section, Washington State Department of Transportation</origin>
+				<pubdate>19990518</pubdate>
+				<title>National Forests of Washington State, at 1:24,000</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<pubinfo>
+					<pubplace>Olympia, Washington, USA</pubplace>
+					<publish>Washington State Department of Transportation</publish>
+				</pubinfo>
+				<ftname Sync="TRUE">natfor_Project</ftname><onlink Sync="TRUE">\\lewia7ytcdpw001\common\Mailbox\Norman_Mark\State_Data\natfor_Project.shp</onlink></citeinfo>
+		</citation>
+		<descript>
+			<abstract>Polygons depict National Forest lands in Washington State.</abstract>
+			<purpose>This data set is used as a reference layer for geographic information systems at the Washington State Department of Transportation (WSDOT).</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>199612</caldate>
+					<time>unknown</time>
+				</sngdate>
+			</timeinfo>
+			<current>ground condition</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-124.383890</westbc>
+				<eastbc Sync="TRUE">-116.923485</eastbc>
+				<northbc Sync="TRUE">49.153741</northbc>
+				<southbc Sync="TRUE">45.562015</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">399075.261644</leftbc><rightbc Sync="TRUE">944393.262388</rightbc><bottombc Sync="TRUE">5061180.169236</bottombc><topbc Sync="TRUE">5444546.728357</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>USFS</themekey>
+				<themekey>forests</themekey>
+				<themekey>National Forests</themekey>
+				<themekey>Forest Service</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Pacific Northwest</placekey>
+				<placekey>United States</placekey>
+				<placekey>USA</placekey>
+				<placekey>WA</placekey>
+				<placekey>Washington</placekey>
+			</place>
+		</keywords>
+		<accconst>none</accconst>
+		<useconst>none</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Ron Cihon</cntper>
+					<cntorg>Geographic Services, Washington State Department of Transportation</cntorg>
+				</cntperp>
+				<cntpos>GIS/Cartography Supervisor</cntpos>
+				<cntaddr>
+					<addrtype>physical address</addrtype>
+					<address>1655 S. 2nd Avenue</address>
+					<city>Tumwater</city>
+					<state>WA</state>
+					<postal>98512</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>
+Mail Stop: 7384
+
+PO Box 47384
+</address>
+					<city>Olympia</city>
+					<state>WA</state>
+					<postal>98504-7384</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>360-709-5510</cntvoice>
+				<cntfax>360-709-5599</cntfax>
+				<cntemail>cihonr@wsdot.wa.gov</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<datacred>Michelle Blake, Washington State Department of Transportation</datacred>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>Names agree with information provided by USGS maps and the USDA Forest Service.</attraccr>
+		</attracc>
+		<logic>Topology was verified with the Arc/Info "BUILD" command.</logic>
+		<complete>Boundary information was provided by USGS maps and the U.S. Forest Service.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Positional accuracy has not been determined.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>GIS/Cartography Section, Washington State Department of Transportation</origin>
+						<pubdate>Unpublished Material</pubdate>
+						<title>gisre8</title>
+						<geoform>map</geoform>
+					</citeinfo>
+				</srccite>
+				<srcscale>24000</srcscale>
+				<typesrc>online</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>199612</caldate>
+							<time>unknown</time>
+						</sngdate>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+				<srccitea>gisre8.dgn</srccitea>
+				<srccontr>The graphics and attributes depicting National Forest lands in Washington State.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>The National Forests of Washington State were digitized in Microstation from USGS Quadrangles and other government provided resources to produce the statewide DGN file, gisre8.dgn.  The DGN file was converted to an Arc/Info coverage with the "IGDSARC" command and reprojected to geographic coordinates with the "PROJECTDEFINE" and "PROJECT" commands.  An ESRI shape file was created in ArcView.</procdesc>
+				<srcused>gisre8.dgn</srcused>
+				<procdate>19970601</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Gordon Kennedy</cntper>
+							<cntorg>Washington State Department of Transportation</cntorg>
+						</cntperp>
+						<cntpos>Coordinator, Information Resources Management</cntpos>
+						<cntaddr>
+							<addrtype>mailing address</addrtype>
+							<address>PO Box 47430</address>
+							<city>Olympia</city>
+							<state>WA</state>
+							<postal>98504-7430</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntaddr>
+							<addrtype>physical address</addrtype>
+							<address>809 Legion Way SE</address>
+							<city>Olympia</city>
+							<state>WA</state>
+							<postal>98501</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>360-705-7641</cntvoice>
+						<cntfax>360-705-6817</cntfax>
+						<cntemail>gkennedy@wsdot.wa.gov</cntemail>
+						<hours>0700 to 1530, Pacific Time, M-F</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\BlakeM\LOCALS~1\Temp\xml4D7.tmp</srcused><date Sync="TRUE">20030507</date><time Sync="TRUE">09225600</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><date Sync="TRUE">20040601</date><time Sync="TRUE">16255000</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><date Sync="TRUE">20060602</date><time Sync="TRUE">08113400</time></procstep></lineage>
+		<cloud>0</cloud>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="natfor_Project"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">81</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><sdtsterm Name="natfor_Project"><sdtstype Sync="TRUE">G-polygon</sdtstype><ptvctcnt Sync="TRUE">81</ptvctcnt></sdtsterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<geodetic>
+				<horizdn Sync="TRUE">D_WGS_1984</horizdn>
+				<ellips Sync="TRUE">WGS_1984</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257224</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn><projcsn Sync="TRUE">WGS_1984_UTM_Zone_10N</projcsn></cordsysn><planar><gridsys><gridsysn Sync="TRUE">Universal Transverse Mercator</gridsysn><utm><utmzone Sync="TRUE">10</utmzone><transmer><sfctrmer Sync="TRUE">0.999600</sfctrmer><longcm Sync="TRUE">-123.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">500000.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></transmer></utm></gridsys><planci><plance Sync="TRUE">coordinate pair</plance><plandu Sync="TRUE">meters</plandu><coordrep><absres Sync="TRUE">0.001024</absres><ordres Sync="TRUE">0.001024</ordres></coordrep></planci></planar></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="natfor_Project">
+			<enttyp>
+				<enttypl Sync="TRUE">natfor_Project</enttypl>
+				<enttypd>An area under the jurisdiction and management of the United States Department of Agriculture Forest Service</enttypd>
+				<enttypds>GIS/Cartography Section, Washington State Department of Transportation</enttypds>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">81</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">AREA</attrlabl><attalias Sync="TRUE">AREA</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">5</atnumdec></attr><attr><attrlabl Sync="TRUE">PERIMETER</attrlabl><attalias Sync="TRUE">PERIMETER</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">5</atnumdec></attr><attr><attrlabl Sync="TRUE">NATFOR_</attrlabl><attalias Sync="TRUE">NATFOR_</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr><attr><attrlabl Sync="TRUE">NATFOR_ID</attrlabl><attalias Sync="TRUE">NATFOR_ID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr><attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">40</attwidth><attrdef>Name of the National Forest</attrdef></attr></detailed>
+		<overview>
+			<eaover>Polygons represent Washington State's National Forest lands and are attributed with the National Forest's name.</eaover>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Washington State Department of Transportation</cntorg>
+					<cntper>Michelle Blake</cntper>
+				</cntorgp>
+				<cntpos>GIS Data Administrator</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>PO Box 47430</address>
+					<city>Olympia</city>
+					<state>WA</state>
+					<postal>98504-7430</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntaddr>
+					<addrtype>physical address</addrtype>
+					<address>809 Legion Way SE</address>
+					<city>Olympia</city>
+					<state>WA</state>
+					<postal>98501</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>360-705-7797</cntvoice>
+				<cntfax>360-705-6817</cntfax>
+				<cntemail>blakem@wsdot.wa.gov</cntemail>
+				<cntinst>Call, email or write with requests for geo-spatial data sets.</cntinst>
+			</cntinfo>
+		</distrib>
+		<resdesc>\gisosc\geodata\maps\24k\dot_cartog\federal\natfor\natfor</resdesc>
+		<distliab>The Washington State Department of Transportation shall not be liable for any activity involving these data with regard to lost profits or savings or any other consequential damages; or the fitness for use of the data for a particular purpose; or the installation of the data, its use, or the results obtained.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formspec>Various formats are used: ESRI coverages and shapefiles, and data tables for placement as ArcView "events."</formspec>
+					<formcont>
+The standard distribution compact disc contains all geospatial data sets created by the Washington State Dept. of Transportation. Refer to the included Geodata.txt text file for a brief description of the directory structure.
+Data formats vary--most data are stored as ESRI shape files, but some data models require coverages. There are also dbf-format tables of data located by geographic coordinates or State Route Accumulated Route Mileage.
+</formcont>
+					<transize Sync="TRUE">0.183</transize><dssize Sync="TRUE">0.183</dssize></digtinfo>
+				<digtopt>
+					<offoptn>
+						<offmedia>CD-ROM</offmedia>
+					</offoptn>
+				</digtopt>
+			</digform>
+			<fees>none</fees>
+			<ordering>Call, email or write the Distributor with requests for geo-spatial data sets.</ordering>
+			<turnarnd>Generally, the standard compact disc containing all distributed data can be sent within one week of receiving a data request.</turnarnd>
+		</stdorder>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>self-extracting zip file</formname>
+					<formvern>6.3 SR-1 (926) 32-bit</formvern>
+					<formspec>WinZip</formspec>
+					<formcont>Depends on the data set. Arc/Info coverage or shape file; metadata report in html and text files; and, in some cases, a data dictionary text file. Some data sets in the standard distribution are tabular data for placement as ArcView "events."</formcont>
+					<filedec>Run the "exe" file under Windows NT.</filedec>
+					<transize Sync="TRUE">0.183</transize><dssize Sync="TRUE">0.183</dssize></digtinfo>
+				<digtopt>
+					<onlinopt>
+						<accinstr>Use anonymous FTP login or web browser download on the URL specified under Network Address.</accinstr>
+						<oncomp>Unix</oncomp>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>none</fees>
+			<ordering>Download individual data sets from ftp://ftp.wsdot.wa.gov/gis/GeoDataDistribution</ordering>
+		</stdorder>
+		<stdorder>
+			<nondig>The Cartography/GIS Section can plot maps of most geospatial data sets.</nondig>
+			<fees>depend on plotting costs.</fees>
+			<ordering>Contact the Point of Contact listed under the Identification Section to determine the availability of this data set in a non-digital representation.</ordering>
+			<digform><digtinfo><transize Sync="TRUE">0.183</transize><dssize Sync="TRUE">0.183</dssize></digtinfo></digform></stdorder>
+		<availabl>
+			<timeinfo>
+				<sngdate>
+					<caldate>unknown</caldate>
+					<time>unknown</time>
+				</sngdate>
+			</timeinfo>
+		</availabl>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20060602</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Washington State Department of Transportation</cntorg>
+					<cntper>Michelle Blake</cntper>
+				</cntorgp>
+				<cntpos>GIS Data Administrator</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>PO Box 47430</address>
+					<city>Olympia</city>
+					<state>WA</state>
+					<postal>98504-7430</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntaddr>
+					<addrtype>physical address</addrtype>
+					<address>809 Legion Way SE</address>
+					<city>Olympia</city>
+					<state>WA</state>
+					<postal>98501</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>360-705-7797</cntvoice>
+				<cntfax>360-705-6817</cntfax>
+				<cntemail>blakem@wsdot.wa.gov</cntemail>
+				<cntinst>Call, email or write with requests for geo-spatial data sets.</cntinst>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metac>none</metac>
+		<metuc>none</metuc>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20060602</CreaDate><CreaTime>08113400</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20060602</SyncDate><SyncTime>08114500</SyncTime><ModDate>20060602</ModDate><ModTime>08114500</ModTime><MetaID>{28CECAEB-BBED-4991-9EA9-14F377FAE5E7}</MetaID><DataProperties><lineage><Process Name="Project_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20060602" Time="081135">Project F:\Mailbox\Norman_Mark\State_Data\natfor.shp F:\Mailbox\Norman_Mark\State_Data\natfor_Project.shp PROJCS['WGS_1984_UTM_Zone_10N',GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',500000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-123.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] NAD_1983_HARN_To_WGS_1984</Process></lineage></DataProperties></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">natfor_Project</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-124.38389</westBL><eastBL Sync="TRUE">-116.923485</eastBL><northBL Sync="TRUE">49.153741</northBL><southBL Sync="TRUE">45.562015</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">399075.261644</westBL><eastBL Sync="TRUE">944393.262388</eastBL><northBL Sync="TRUE">5444546.728357</northBL><southBL Sync="TRUE">5061180.169236</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\lewia7ytcdpw001\common\Mailbox\Norman_Mark\State_Data\natfor_Project.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.183</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">WGS_1984_UTM_Zone_10N</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="natfor_Project"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">81</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20060602</mdDateSt></metadata>

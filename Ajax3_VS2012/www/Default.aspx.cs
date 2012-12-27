@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.Reflection;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
@@ -14,7 +15,7 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
     protected void Page_Load(object sender, EventArgs e)
     {
         //Set up the map. We use the method in the App_Code folder for initializing the map
-        ajaxMap.Map = MapHelper.InitializeMap(new System.Drawing.Size(10, 10));
+        ajaxMap.Map = MapHelper.InitializeMap(new System.Drawing.Size(10, 10), null, null);
         ajaxMap.FadeSpeed = 5;
         ajaxMap.ZoomSpeed = 5;
         Envelope mapExtents = (Envelope)ajaxMap.Map.GetExtents();
@@ -48,7 +49,7 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
     private void createCheckboxes(LayerCollection LayerList)
     {
         Int32 i = 0;
-        foreach (SharpMap.Layers.ILayer myLayer in LayerList)
+        foreach (SharpMap.Layers.Layer myLayer in LayerList)
         {
             CheckBox chk = new CheckBox();
             chk.ID = "chk" + i.ToString();
@@ -59,7 +60,7 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
 
             if (myLayer.GetType() == typeof(SharpMap.Layers.LayerGroup))
             {
-                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);togLayerGroup(this, '" + chk.ID.Substring(3) + "');");
+                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);togLayerGroup(this, '" + chk.ID.Substring(3) + "');test(ajaxMapObj);");
                 pnlLayers.Controls.Add(chk);
                 HtmlImage exCol = new HtmlImage();
                 exCol.ID = "img" + i.ToString();
@@ -73,11 +74,39 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
             }
             else
             {
-                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);");
+                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);test(ajaxMapObj);");
                 chk.Text = myLayer.LayerName;
                 pnlLayers.Controls.Add(chk);
-               // if (myLayer.GetType() == typeof(SharpMap.Layers.VectorLayer))
-               //     pnlLayers.Controls.Add(LegendDiv(myLayer));
+
+                DropDownList listFill = new DropDownList();
+                DropDownList listLine = new DropDownList();
+                listFill.ID = "ColorPicker1" + myLayer.LayerName;
+                listLine.ID = "ColorPicker2" + myLayer.LayerName;
+
+                Type colorType = typeof(System.Drawing.Color);
+                // We take only static property to avoid properties like Name, IsSystemColor ...
+                PropertyInfo[] propInfos = colorType.GetProperties(BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public);
+                foreach (PropertyInfo propInfo in propInfos)
+                {
+                    listFill.Items.Add(propInfo.Name);
+                    listLine.Items.Add(propInfo.Name);
+                }
+
+                //pnlLayers.Controls.Add(new LiteralControl("<br>"));
+                //pnlLayers.Controls.Add(new LiteralControl("Fill Color:"));
+
+                listFill.SelectedValue = ((SolidBrush)((SharpMap.Styles.VectorStyle)myLayer.Style).Fill).Color.Name;
+                listFill.Attributes.Add("onChange", "javascript:test(ajaxMapObj)");
+                listFill.Attributes.Add("tag", myLayer.LayerName);
+                pnlLayers.Controls.Add(listFill);
+
+                //pnlLayers.Controls.Add(new LiteralControl("<br>"));
+                //pnlLayers.Controls.Add(new LiteralControl("Line Color:"));
+
+                listLine.SelectedValue = ((SharpMap.Styles.VectorStyle)myLayer.Style).Line.Color.Name;
+                listLine.Attributes.Add("onChange", "javascript:test(ajaxMapObj)");
+                listLine.Attributes.Add("tag", myLayer.LayerName);
+                pnlLayers.Controls.Add(listLine);
             }
 
             pnlLayers.Controls.Add(new LiteralControl("<br>"));
@@ -105,7 +134,7 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
 
             if (subLayer.GetType() == typeof(SharpMap.Layers.LayerGroup))
             {
-                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);togLayerGroup(this, '" + chk.ID.Substring(3) + "');");
+                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);togLayerGroup(this, '" + chk.ID.Substring(3) + "');test(ajaxMapObj);");
                 myDiv.Controls.Add(chk);
                 HtmlImage exCol = new HtmlImage();
                 exCol.ID = "img" + i.ToString();
@@ -120,7 +149,7 @@ public partial class Ajax : System.Web.UI.Page//, ICallbackEventHandler
             }
             else
             {
-                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);");
+                chk.Attributes.Add("OnClick", "SharpMap_HiddenLayers(ajaxMapObj);test(ajaxMapObj);");
                 chk.Text = subLayer.LayerName;
                 myDiv.Controls.Add(chk);
                // if (subLayer.GetType() == typeof(SharpMap.Layers.VectorLayer))

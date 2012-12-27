@@ -24,113 +24,235 @@ using SharpMap.Rendering.Thematics;
 /// </summary>
 public class MapHelper
 {
-    public static SharpMap.Map InitializeMap(Size size)
+    public static SharpMap.Map InitializeMap(Size size, string colors, string colorsLine)
     {
         HttpContext.Current.Trace.Write("Initializing map...");
 
         //Initialize a new map of size 'imagesize'
-        SharpMap.Map map = new SharpMap.Map(size);
+        var map = new SharpMap.Map(size);
 
+        var blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 1);
+        var blackPen2 = new Pen(Color.FromArgb(255, 0, 0, 0), 2);
+        var greenPen = new Pen(Color.FromArgb(255, 0, 255, 0), 1);
+        var greenPenTransp = new Pen(Color.FromArgb(255, 0, 255, 0), 1);
+        greenPenTransp.Color = Color.FromArgb(100, greenPenTransp.Color.R, greenPenTransp.Color.G, greenPenTransp.Color.B);
+        var redPen = new Pen(Color.FromArgb(255, 255, 0, 0), 1);
+        var bluePen = new Pen(Color.FromArgb(255, 0, 0, 255), 1);
+        var violetPen = new Pen(Color.FromArgb(255, 255, 0, 255), 1);
+        var cyanPen = new Pen(Color.FromArgb(255, 0, 255, 255), 1);
+        var yellowPen = new Pen(Color.FromArgb(255, 255, 255, 0), 1);
+        var darkGrayPen = new Pen(Color.DarkGray, 1);
+        var darkGrayPenTransp = new Pen(Color.DarkGray, 1);
+        darkGrayPenTransp.Color = Color.FromArgb(100, darkGrayPenTransp.Color.R, darkGrayPenTransp.Color.G, darkGrayPenTransp.Color.B);
+        var lightBluePen = new Pen(Color.LightBlue, 1);
+        var lightGreenPen = new Pen(Color.LightGreen, 1);
+        var lightGrayPen = new Pen(Color.FromArgb(255, 234, 234, 234));
+        var darkGreenPen = new Pen(Color.DarkGreen);
+        var azurePen = new Pen(Color.DarkKhaki);
+        var lightGoldenrodYellowPen = new Pen(Color.LightGoldenrodYellow);
 
-        var lvivLayer = new VectorLayer("Lviv");
-        lvivLayer.DataSource = new ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\MapLviv\block.shp"), true);
-        var pen = new Pen(Color.FromArgb(255, 0, 0, 1));
-        lvivLayer.Style.Outline = pen;
-        lvivLayer.Style.Fill = new SolidBrush(Color.FromArgb(255, 234, 234, 234));
-        lvivLayer.Style.EnableOutline = true;
+        Dictionary<string, Color> colorFill = new Dictionary<string, Color>();
 
-        var lvivFuelCompaniesLayer = new VectorLayer("Lviv fuel companies");
-        lvivFuelCompaniesLayer.DataSource = new ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\MapStations\fuel_stations_lviv.shp"), true);
-
-        lvivFuelCompaniesLayer.Style.Outline = pen;
-        lvivFuelCompaniesLayer.Style.Fill = new SolidBrush(Color.FromArgb(222, 90, 97, 234));
-        lvivFuelCompaniesLayer.Style.EnableOutline = true;
-
-        #region NationalPark layers
-        /*
-        //Set up the boundaries layer
-        SharpMap.Layers.VectorLayer layWA_Bounds = new SharpMap.Layers.VectorLayer("Washington State");
-        layWA_Bounds.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\NationalPark\wa_bndry.shp"), true);
-        //layWA_Bounds.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\Lviv\regions.shp"), true);
-         
-        Pen WAPen = new Pen(Color.FromArgb(255, 0, 0, 1));
-        layWA_Bounds.Style.Outline = WAPen;
-        layWA_Bounds.Style.Fill = new SolidBrush(Color.FromArgb(255, 234, 234, 234));
-        layWA_Bounds.Style.EnableOutline = true;
-
-
-        //Set up Streams layer
-        SharpMap.Layers.VectorLayer layHydromjr = new SharpMap.Layers.VectorLayer("Streams");
-        layHydromjr.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\NationalPark\wa_hydro.shp"), true);
-        layHydromjr.Style.Line = new Pen(Color.FromArgb(255, 0, 100, 255));
-        layHydromjr.MaxVisible = 70000;
-
-        VectorStyle newStyle = new VectorStyle();
-        newStyle.Fill = new SolidBrush(Color.FromArgb(0, 0, 0));
-        Dictionary<string, IStyle> styles = new Dictionary<string, IStyle>();
-        styles.Add("newStyle", newStyle);
         
-        //layHydromjr.Theme = theme;
+        if (colors != null)
+        {
+            colors = colors.Replace(",", "");
+            string[] parts = colors.Split('|');
 
-        //Set up National Park  area layer
-        SharpMap.Layers.VectorLayer layWA_ParkAreas = new SharpMap.Layers.VectorLayer("Park Area");
-        layWA_ParkAreas.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\NationalPark\natpark.shp"), true);
-        layWA_ParkAreas.Style.Outline = new Pen(Color.FromArgb(200, 111, 161, 113));
-        layWA_ParkAreas.Style.Fill = new SolidBrush(Color.FromArgb(200, 169, 219, 182));
-        layWA_ParkAreas.Style.EnableOutline = true;
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (parts[i] != "")
+                {
+                    string[] pair = parts[i].Split('=');
 
-        //Set up a Park label layer
-        SharpMap.Layers.LabelLayer layParkLabels = new SharpMap.Layers.LabelLayer("Park Labels");
-        layParkLabels.DataSource = layWA_ParkAreas.DataSource;
-        layParkLabels.Enabled = true;
-        layParkLabels.LabelColumn = "NAME";
-        layParkLabels.Style = new SharpMap.Styles.LabelStyle();
-        layParkLabels.Style.ForeColor = Color.Navy;
-        layParkLabels.Style.Font = new Font("Arial", 14, FontStyle.Bold);
-        layParkLabels.Style.BackColor = new System.Drawing.SolidBrush(Color.FromArgb(75, 255, 255, 255));
-        layParkLabels.MaxVisible = 130000;
-        layParkLabels.Style.HorizontalAlignment = SharpMap.Styles.LabelStyle.HorizontalAlignmentEnum.Center;
+                    try
+                    {
+                        colorFill.Add(pair[0], Color.FromName(pair[1]));
+                    }
+                    catch { }
+                }
+            }
+        }
+        else
+        {
+            colorFill["Lviv"] = Color.FromArgb(255, 234, 234, 234);
+            colorFill["Suburbs2"] = lightGrayPen.Color;
+            colorFill["Parks"] = darkGreenPen.Color;
+            colorFill["Suburbs1"] = lightGrayPen.Color;
+            colorFill["Homes"] = azurePen.Color;
+            colorFill["Proms"] = darkGrayPen.Color;
+            colorFill["FuelStations"] = Color.FromArgb(255, 234, 234, 234);
+        }
 
-        //Set up National Forest layer
-        SharpMap.Layers.VectorLayer layWA_Forests = new SharpMap.Layers.VectorLayer("National Forests");
-        layWA_Forests.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\NationalPark\natfor.shp"), true);
-        layWA_Forests.Style.Outline = new Pen(Color.FromArgb(200, 165, 165, 73));
-        layWA_Forests.Style.Fill = new SolidBrush(Color.FromArgb(200, 236, 241, 185));
-        layWA_Forests.Style.EnableOutline = true;
+        Dictionary<string, Color> colorLineDict = new Dictionary<string, Color>();
 
-        //Set up National Rec layer
-        SharpMap.Layers.VectorLayer layWA_RecArea = new SharpMap.Layers.VectorLayer("National Rec Areas");
-        layWA_RecArea.DataSource = new SharpMap.Data.Providers.ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\NationalPark\natrec.shp"), true);
-        layWA_RecArea.Style.Outline = new Pen(Color.FromArgb(200, 170, 116, 56));
-        layWA_RecArea.Style.Fill = new SolidBrush(Color.FromArgb(200, 226, 198, 168));
-        layWA_RecArea.Style.EnableOutline = true;
+        
+        if (colors != null)
+        {
+            colorsLine = colorsLine.Replace(",", "");
+            string[] parts = colorsLine.Split('|');
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (parts[i] != "")
+                {
+                    string[] pair = parts[i].Split('=');
+
+                    try
+                    {
+                        colorLineDict.Add(pair[0], Color.FromName(pair[1]));
+                    }
+                    catch { }
+                }
+            }
+        }
+        else
+        {
+            colorLineDict["Lviv"] = blackPen.Color;
+            colorLineDict["Suburbs2"] = blackPen.Color;
+            colorLineDict["Parks"] = blackPen.Color;
+            colorLineDict["Suburbs1"] = blackPen.Color;
+            colorLineDict["Homes"] = blackPen.Color;
+            colorLineDict["Proms"] = blackPen.Color;
+            colorLineDict["FuelStations"] = blackPen.Color;
+        }
+
+        bool town = true;
+        if (town)
+        {
+            var lvivBlockLayer = new VectorLayer("Lviv");
+            lvivBlockLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\maps_lviv_new\block.shp"), true);
+            lvivBlockLayer.Style.Outline = new Pen(colorLineDict["Lviv"]);
+            lvivBlockLayer.Style.Fill = new SolidBrush( colorFill["Lviv"] );
+            lvivBlockLayer.Style.EnableOutline = true;
+            map.Layers.Add(lvivBlockLayer);
+
+            var suburbsLayer2 = new VectorLayer("Suburbs2");
+            suburbsLayer2.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LLSITY12.shp"), true);
+            suburbsLayer2.Style.Outline = new Pen(colorLineDict["Suburbs2"]);
+            suburbsLayer2.Style.Fill = new SolidBrush(colorFill["Suburbs2"]);
+            suburbsLayer2.Style.EnableOutline = true;
+            map.Layers.Add(suburbsLayer2);
+
+            var parksLayer = new VectorLayer("Parks");
+            parksLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LLVGREN1.shp"),
+                true);
+            parksLayer.Style.Outline = new Pen(colorLineDict["Parks"]);
+            parksLayer.Style.Fill = new SolidBrush(colorFill["Parks"]);
+            parksLayer.Style.EnableOutline = true;
+            map.Layers.Add(parksLayer);
+
+            var suburbsLayer1 = new VectorLayer("Suburbs1");
+            suburbsLayer1.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LLVELL12.shp"),
+                true);
+            suburbsLayer1.Style.Outline = new Pen(colorLineDict["Suburbs1"]);
+            suburbsLayer1.Style.Fill = new SolidBrush(colorFill["Suburbs1"]);
+            suburbsLayer1.Style.EnableOutline = true;
+            map.Layers.Add(suburbsLayer1);
+
+            //homes
+            var homesLayer = new VectorLayer("Homes");
+            homesLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LLVHOM12.shp"),
+                true);
+            homesLayer.Style.Outline = new Pen(colorLineDict["Homes"]);
+            homesLayer.Style.Fill = new SolidBrush(colorFill["Homes"]);
+            homesLayer.Style.EnableOutline = true;
+            map.Layers.Add(homesLayer);
+
+            //proms
+            var promLayer = new VectorLayer("Proms");
+            promLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LLVPROM.shp"), true);
+            promLayer.Style.Outline = new Pen(colorLineDict["Proms"]);
+            promLayer.Style.Fill = new SolidBrush(colorFill["Proms"]);
+            promLayer.Style.EnableOutline = true;
+            map.Layers.Add(promLayer);
+
+            VectorLayer fuelStationLayer = new VectorLayer("FuelStations");
+            fuelStationLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\FuelStationsLayers\LvivCityCorr\fuel_stations_lviv.shp"),
+                true);
+            fuelStationLayer.Style.Outline = new Pen(colorLineDict["FuelStations"]);
+            fuelStationLayer.Style.Fill = new SolidBrush(colorFill["FuelStations"]);
+            fuelStationLayer.Style.EnableOutline = true;
+            map.Layers.Add(fuelStationLayer);
+
+            //var tmp6 = new VectorLayer("Lviv"){DataSource = new ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LROAD12.shp"), true)};
+            //tmp6.Style.Outline = waPen6;
+            //tmp6.Style.Fill = new SolidBrush(Color.FromArgb(255, 234, 234, 234));
+            //tmp6.Style.EnableOutline = true;
+            //map.Layers.Add(tmp6);
+        }
+        else
+        {
+            var lvivRegioonLayer = new VectorLayer("Region");
+            lvivRegioonLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\lv_line.shp"), true);
+            lvivRegioonLayer.Style.Outline = blackPen2;
+            lvivRegioonLayer.Style.Fill = new SolidBrush(Color.FromArgb(255, 234, 234, 234));
+            lvivRegioonLayer.Style.EnableOutline = true;
+            map.Layers.Add(lvivRegioonLayer);
+
+            var territoryLayer = new VectorLayer("Regions");
+            territoryLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\terrytor.shp"), true);
+            territoryLayer.Style.Outline = darkGrayPenTransp;
+            territoryLayer.Style.Fill = new SolidBrush(lightGoldenrodYellowPen.Color);
+            territoryLayer.Style.EnableOutline = true;
+            map.Layers.Add(territoryLayer);
+
+            var lakesLayer = new VectorLayer("Lakes");
+            lakesLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\vodoimy.shp"), true);
+            lakesLayer.Style.Outline = blackPen;
+            lakesLayer.Style.Fill = new SolidBrush(bluePen.Color);
+            lakesLayer.Style.EnableOutline = true;
+            map.Layers.Add(lakesLayer);
+
+            var punkLayer = new VectorLayer("Punks");
+            punkLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\nas_punk.shp"), true);
+            punkLayer.Style.Outline = blackPen;
+            punkLayer.Style.Fill = new SolidBrush(darkGrayPen.Color);
+            punkLayer.Style.EnableOutline = true;
+            map.Layers.Add(punkLayer);
+
+            var railsLayer = new VectorLayer("Rails");
+            railsLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\zal_kol.shp"), true);
+            //map.Layers.Add(railsLayer);
+
+            var fuelStationLayer = new VectorLayer("FuelStations");
+            fuelStationLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\FuelStationsLayers\LvivObl\fuel_stations.shp"),
+                true);
+            map.Layers.Add(fuelStationLayer);
+
+            var roadsLayer = new VectorLayer("Roads");
+            roadsLayer.Style.Outline = blackPen;
+            roadsLayer.DataSource = new ShapeFile(
+                HttpContext.Current.Server.MapPath(
+                    @"~\App_Data\Lviv_Region_Romik\meregi.shp"), true);
+            map.Layers.Add(roadsLayer);
 
 
+        }
 
-        //Set up National Parks layer group
-        SharpMap.Layers.LayerGroup layWA_Parks = new SharpMap.Layers.LayerGroup("National Parks");
-        layWA_Parks.Layers.Add(layWA_ParkAreas);
-        layWA_Parks.Layers.Add(layParkLabels);
-
-        //Set up Public Lands layer group
-        SharpMap.Layers.LayerGroup layPublic = new SharpMap.Layers.LayerGroup("Public Lands");
-
-        //           layPublic.Layers.Add(layWA_Parks); //THIS LAYER IS THE PROBELM
-
-        layPublic.Layers.Add(layWA_Forests);
-        layPublic.Layers.Add(layWA_RecArea);
-
-        //Add layers to map
-        map.Layers.Add(layWA_Bounds);
-        map.Layers.Add(layPublic);
-        // map.Layers.Add(layHydromjr);
-        */
-        #endregion
-
-        map.Layers.Add(lvivLayer);
-        map.Layers.Add(lvivFuelCompaniesLayer);
-
-        Envelope mapExtents = map.GetExtents();
+        GeoAPI.Geometries.Envelope mapExtents = map.GetExtents();
+        //SharpMap.Geometries.BoundingBox mapExtents = map.GetExtents();
         map.Zoom = mapExtents.Width;
         map.MaximumZoom = mapExtents.Width;
         map.MinimumZoom = 2000;
@@ -171,8 +293,6 @@ public class MapHelper
         map.ZoomToBox(tileLayer.Envelope);
         return map;
     }
-
-
 
     //public void CreateMapWithExcelDataSource()
     //{

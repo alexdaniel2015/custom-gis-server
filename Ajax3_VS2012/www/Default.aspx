@@ -6,16 +6,122 @@
 
 <head runat="server">
     <title>Map</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script type="text/javascript">
+
+        var result;
+        function test(ajaxMapObj) {
+            result = null;
+            FindElement(document, "ColorPicker1");
+            var colors = "";
+
+            for (var i = 0; i < result.length; i++) {
+                colors += result[i].attributes["tag"].value + "=" + result[i].value + "|";
+            }
+
+            result = null;
+            FindElement(document, "ColorPicker2");
+            var colorsLine = "";
+
+            for (var i = 0; i < result.length; i++) {
+                colorsLine += result[i].attributes["tag"].value + "=" + result[i].value + "|";
+            }
+
+            //alert(ajaxMapObj);
+            var part = ajaxMapObj.hiddenLayers.split('&');
+            ajaxMapObj.hiddenLayers = part[0] + "&Colors=" + colors + "&ColorsLine=" + colorsLine;
+            SharpMap_ZoomExtents(ajaxMapObj);
+            //ajaxMapObj.LayersColorFill = "&Colors=" + colors;
+            //ajaxMapObj.LayersColorLine = "&ColorsLine=" + colorsLine;
+            //alert(ajaxMapObj.LayersColor);
+ //           SharpMap_ZoomExtents(ajaxMapObj);
+
+            //var src = ajaxMapObj.map1.src;
+            //SetVars_ajaxMap();
+            //alert("here");
+            //ajaxMapObj.map1.src = ajaxMapObj.map1.src + "&colors=" + colors + "&colorsLine=" + colorsLine;
+
+            //SetVars_ajaxMap();
+            //alert(ajaxMapObj.map1.src);
+
+            //
+            //var map1 = document.getElementById("ajaxMap_ctl00");
+            //var map2 = document.getElementById("ajaxMap_ctl01");
+            //map1.src = src;
+            //map2.src = "&colors=" + colors + "&colorsLine=" + colorsLine;
+            //src = "&colors=" + colors + "&colorsLine=" + colorsLine;
+
+
+    //        ajaxMapObj.map1.src += "&colors=" + colors + "&colorsLine=" + colorsLine;
+
+     //       ajaxMapObj.map1.src += "&colors=" + colors + "&colorsLine=" + colorsLine;
+
+    //       setTimeout(function () {
+    //            
+            //        }, 1000);
+
+  //          
+            //WebForm_InitCallback();
+           // __doPostback("ajaxMap", "");
+
+     //       __doPostback("Form1", "");      
+     //       __doPostback("Form1", "");
+     //       alert("here");
+            //SharpMap_ZoomExtents(ajaxMapObj);
+            
+            //
+            //WebForm_InitCallback();
+            //
+
+            //ajaxMapObj.map1.src = "maphandler.aspx?MAP=SimpleWorld&Width=1088&Height=640&Zoom=302378.87&X=101883.965&Y=114944.445&Layers=none";
+            //WebForm_InitCallback();
+
+            /*
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                    //document.getElementById("testdiv").innerHTML = xmlhttp.responseText;
+                }
+            };
+
+            xmlhttp.open("GET", ajaxMapObj.map1.src, true);
+            xmlhttp.send();*/
+        }
+
+
+        function FindElement(element, id) {
+
+            if (result == null) {
+                result = [];
+            }
+
+            for (var i = 0; i < element.childNodes.length; i++) {
+                var child = element.childNodes[i];
+                if (child.tagName) {
+                    //if id string is part of a control id
+                    var idx = child.id.indexOf(id);
+                    if (-1 != idx) {
+                        result.push(child);
+                        //break;
+                    }
+                    else {
+                        FindElement(child, id);
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body">
+    <div id="testdiv"></div>
     <form id="Form1" runat="server" action="Default.aspx">
-        <div style="text-align: center; padding: 1em;">
-            <h2 style="width: 965px">Map</h2>
-            <div style="background: #f3f2e7; color: #000; width: 74em; text-align: left; height: 54em; border: solid 1px #000">
+        <div style="text-align: center; padding: 1em; background-color: gray;">
+            <div style="background: #f3f2e7; color: #000; width: 100%; text-align: left; height: 54em; border: solid 1px #000">
 
-                <div style="position: relative; margin-left: 18em; width: 52em;">
+                <div style="position: relative; margin-left: 350px; width: 52em;">
 
                     <div id="clickTools" class="toolbar" style="width: 4.2em">
 
@@ -45,16 +151,16 @@
 
                 </div>
 
-                <div id="divLayers" style="margin: 2.5em 1em 0em 1em; width: 15em; position: absolute; background: #fff; border: solid 1px #000; padding: 0.5em">
+                <div id="divLayers" style="margin: 25px 1em 0em 1em; width: 25em; height: 50em; position: absolute; background: #fff; border: solid 1px #000; padding: 0.5em">
                     <h4>Layers</h4>
 
                     <asp:Panel ID="pnlLayers" runat="server" Height="255px" Width="191px" />
 
                 </div>
 
-                <div style="position: absolute; width: 52em; height: 48em; margin-top: 2em; margin-left: 18em; border: 1px solid #000">
+                <div style="position: absolute; width: 75em; height: 655px; margin-top: 2em; margin-left: 350px; border: 1px solid #000">
 
-                    <smap:AjaxMapControl Width="52em" Height="48em" ID="ajaxMap" runat="server" />
+                    <smap:AjaxMapControl Width="75em" Height="655px" ID="ajaxMap" runat="server" />
 
                 </div>
             </div>

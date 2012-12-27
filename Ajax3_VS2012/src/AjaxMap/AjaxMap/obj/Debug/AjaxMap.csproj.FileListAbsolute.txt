@@ -33,3 +33,27 @@ D:\study\5 course\Venherskiy\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\ProjNet.
 D:\study\5 course\Venherskiy\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\Newtonsoft.Json.xml
 D:\study\5 course\Venherskiy\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.dll
 D:\study\5 course\Venherskiy\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.pdb
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\www\Bin\AjaxMap.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\www\Bin\AjaxMap.pdb
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.dll
+D:\Projects\custom-gis-server-master-new\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\www\Bin\AjaxMap.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\www\Bin\AjaxMap.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\AjaxMap.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\AjaxMap.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\GeoAPI.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\SharpMap.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\Common.Logging.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\ProjNet.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\BruTile.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\NetTopologySuite.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\PowerCollections.dll
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\SharpMap.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\SharpMap.xml
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\ProjNet.pdb
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\ProjNet.xml
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\custom-gis-server-master\custom-gis-server-master\Ajax3_VS2012\src\AjaxMap\AjaxMap\obj\Debug\AjaxMap.csprojResolveAssemblyReference.cache
