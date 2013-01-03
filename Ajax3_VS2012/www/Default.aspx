@@ -159,10 +159,10 @@
    
 
     <div class="container">
+
     <div id="testdiv"></div>
-    <form id="Form1" runat="server" action="Default.aspx">
         
-        <div class="row">
+         <div class="row">
             <div class="span10 search-menu">
                 <form class="form-inline">
                     <h4>Search</h4>  
@@ -185,6 +185,7 @@
             </div>
         </div>
 
+    <form id="Form1" runat="server" action="Default.aspx">
         <div class="row">           
             <div id="divLayers" class="span3 config-menu">
                 <h4>Layers Configuration</h4>
