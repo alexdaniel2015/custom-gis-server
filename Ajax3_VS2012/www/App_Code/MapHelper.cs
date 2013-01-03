@@ -183,7 +183,9 @@ public class MapHelper
             fuelStationLayer.Style.Outline = new Pen(colorLineDict["FuelStations"]);
             fuelStationLayer.Style.Fill = new SolidBrush(colorFill["FuelStations"]);
             fuelStationLayer.Style.EnableOutline = true;
-            fuelStationLayer.Style.PointColor = Brushes.AliceBlue;
+            //fuelStationLayer.Style.PointColor = Brushes.AliceBlue;
+            SharpMap.Rendering.Thematics.CustomTheme myTheme = new SharpMap.Rendering.Thematics.CustomTheme(GetFullStationStyle);
+            fuelStationLayer.Theme = myTheme;
             map.Layers.Add(fuelStationLayer);
 
             //var tmp6 = new VectorLayer("Lviv"){DataSource = new ShapeFile(HttpContext.Current.Server.MapPath(@"~\App_Data\maps_lviv_new\LROAD12.shp"), true)};
@@ -295,6 +297,55 @@ public class MapHelper
         map.BackgroundLayer.Add(tileLayer);
         map.ZoomToBox(tileLayer.Envelope);
         return map;
+    }
+
+
+    private static SharpMap.Styles.VectorStyle GetFullStationStyle(SharpMap.Data.FeatureDataRow row)
+    {
+        SharpMap.Styles.VectorStyle style = new SharpMap.Styles.VectorStyle();
+        string s1 = row["Oid"].ToString();
+        string s2 = row["id"].ToString();
+
+        if (Int32.Parse(s1) < 6)
+        {
+            style.PointColor = new SolidBrush(Color.DarkOrange);
+            style.PointSize = 20f;
+        }
+        else
+        {
+            style.PointColor = new SolidBrush(Color.DeepSkyBlue);
+            style.PointSize = 10f;
+        }
+      
+        //switch (row["NAME"].ToString().ToLower())
+        //{
+        //    case "denmark": //If country name is Danmark, fill it with green
+        //        style.Fill = Brushes.Green;
+        //        return style;
+        //    case "united states": //If country name is USA, fill it with Blue and add a red outline
+        //        style.Fill = Brushes.Blue;
+        //        style.Outline = Pens.Red;
+        //        return style;
+        //    case "china": //If country name is China, fill it with red
+        //        style.Fill = Brushes.Red;
+        //        return style;
+        //    default:
+        //        break;
+        //}
+        ////If country name starts with S make it yellow
+        //if (row["NAME"].ToString().StartsWith("S"))
+        //{
+        //    style.Fill = Brushes.Yellow;
+        //    return style;
+        //}
+        //// If geometry is a (multi)polygon and the area of the polygon is less than 30, make it cyan
+        //else if (row.Geometry is GeoAPI.Geometries.IPolygonal && row.Geometry.Area < 30)
+        //{
+        //    style.Fill = Brushes.Cyan;
+        //    return style;
+        //}
+        //else //None of the above -> Use the default style
+            return style ;
     }
 
     //public void CreateMapWithExcelDataSource()
